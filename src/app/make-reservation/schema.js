@@ -22,6 +22,10 @@ const isValidTime = (date, value) => {
   const [hour, minute] = value.split(":").map(Number);
   const [day, month, year] = date.split("/").map(Number);
 
+  if (hour < 10 || hour > 16) {
+    return false;
+  }
+
   const parsedDate = parse(`${year}-${month}-${day}`, "yyyy-MM-dd", new Date());
   const today = parse(
     format(new Date(), "yyyy-MM-dd"),
