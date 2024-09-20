@@ -1,5 +1,5 @@
 import * as yup from "yup";
-import { parse, isValid, isDate, format } from "date-fns";
+import { parse, isValid, format } from "date-fns";
 
 const isValidDate = (value) => {
   if (!value) {
